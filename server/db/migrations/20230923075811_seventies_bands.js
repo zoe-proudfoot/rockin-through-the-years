@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 export function up(knex) {
-  return knex.schema.createTable('sixties_bands', (table) => {
+  return knex.schema.createTable('seventies_bands', (table) => {
     table.increments('id').primary()
     table.string('band_name').notNullable().unique()
     table.string('genre').notNullable()
@@ -23,5 +23,5 @@ export function up(knex) {
  * @returns { Promise<void> }
  */
 export function down(knex) {
-  return knex.schema.dropTable('sixties_bands')
+  return knex.schema.dropTable('seventies_bands')
 }
